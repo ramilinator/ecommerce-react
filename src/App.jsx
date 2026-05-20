@@ -1,34 +1,26 @@
+import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+import Home from "./pages/Home";
+import Auth from "./pages/Auth";
+import Checkout from "./pages/Checkout";
+
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [showCounter, setShowCounter] = useState(false);
-
   return (
     <>
-      <button onClick={() => setShowCounter(!showCounter)}>Show Counter</button>
-      {showCounter && <Counter />}
+      <div className="app">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/checkout" element={<Checkout />} />
+        </Routes>
+      </div>
     </>
   );
-}
-
-function Counter() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    console.log("Component Mounted");
-
-    return () => {
-      console.log("Component Unmounted");
-    };
-  }, []);
-
-  useEffect(() => {
-    console.log("Component Updated");
-  }, [count]);
-
-  return <button onClick={() => setCount(count + 1)}>{count}</button>;
 }
 
 export default App;
