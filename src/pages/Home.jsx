@@ -1,4 +1,4 @@
-import ProductCards from "../components/ProductCards";
+import ProductCard from "../components/ProductCard";
 import { getProducts } from "../data/products";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
         <h2 className="page-title">Our Products</h2>
         <div className="product-grid">
           {products.map((product) => (
-            <ProductCards product={product} key={product.id} />
+            <ProductCard product={product} key={product.id} />
           ))}
         </div>
       </div>

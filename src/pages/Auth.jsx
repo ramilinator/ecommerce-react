@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams, Link } from "react-router-dom";
 
 export default function Auth() {
-  const [mode, setMode] = useState("signup");
+  const [searchParams] = useSearchParams();
+  const mode = searchParams.get("mode") === "login" ? "login" : "signup";
+
   const [error, setError] = useState(null);
 
   const { signUp, login } = useAuth();
@@ -90,17 +92,16 @@ export default function Auth() {
             {mode === "signup" ? (
               <p>
                 Already have an account?{" "}
-                <span className="auth-link" onClick={() => setMode("login")}>
+                <Link className="auth-link" to="/auth?mode=login">
                   Login
-                </span>
+                </Link>
               </p>
             ) : (
               <p>
-                {" "}
                 Don't have an account?{" "}
-                <span className="auth-link" onClick={() => setMode("signup")}>
+                <Link className="auth-link" to="/auth?mode=signup">
                   Sign Up
-                </span>
+                </Link>
               </p>
             )}
           </div>
