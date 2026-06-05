@@ -4,7 +4,7 @@ const products = [
     name: "Wireless Headphones",
     price: 99.99,
     image:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?q=80&w=1626&auto=format&fit=crop",
     description:
       "Premium wireless headphones with noise cancellation and 30-hour battery life. Perfect for music lovers and professionals.",
   },
@@ -22,7 +22,7 @@ const products = [
     name: "Laptop Stand",
     price: 49.99,
     image:
-      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1505209487757-5114235191e5?q=80&w=1473&auto=format&fit=crop",
     description:
       "Ergonomic aluminum laptop stand that improves posture and workspace organization. Adjustable height and angle.",
   },
@@ -67,9 +67,18 @@ const products = [
     name: "Webcam HD",
     price: 89.99,
     image:
-      "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1623949556303-b0d17d198863?q=80&w=1470&auto=format&fit=crop",
     description:
       "1080p HD webcam with auto-focus and built-in microphone. Ideal for video calls and streaming.",
+  },
+  {
+    id: 9,
+    name: "Bluetooth Speaker",
+    price: 149.99,
+    image:
+      "https://images.unsplash.com/photo-1589003077984-894e133dabab?q=80&w=1074&auto=format&fit=crop",
+    description:
+      "Ultra-portable and lightweight, this pocket-sized wireless speaker delivers surprisingly punchy bass and crystal-clear sound",
   },
 ];
 
