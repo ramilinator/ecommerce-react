@@ -30,7 +30,10 @@ function Hero() {
   return (
     <Swiper
       modules={[Pagination, Navigation]}
-      autoplay={{ delay: 4000 }}
+      autoplay={{
+        delay: 4000,
+        disableOnInteraction: false,
+      }}
       pagination={{ clickable: true }}
       navigation
       loop={true}
